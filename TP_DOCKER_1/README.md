@@ -1,6 +1,7 @@
-# 1 . Installation de docker
-# 2 . Créer dossier TP_DOCKER_1
-# 3 . Executer un serveur web dans un container 
+# TP1 Docker
+## 1 . Installation de docker
+## 2 . Créer dossier TP_DOCKER_1
+## 3 . Executer un serveur web dans un container 
    - Pour récuperer l'image httpd
    ```bash
    docker pull httpd:latest 
