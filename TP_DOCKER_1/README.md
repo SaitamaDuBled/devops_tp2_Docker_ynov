@@ -21,6 +21,6 @@
    - Stopper et arreter 
    ```bash 
    docker ps                   // voir les conteneur en marche
-   docker stop [CONTENEUR]     //stopper
+   docker stop [CONTENEUR]     // stopper
    docker rm [CONTENEUR]       // supprimer
    ```
