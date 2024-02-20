@@ -30,25 +30,25 @@
    
 - à l'aide d'un dockerfile, créer une image qui permet d'exécuter un serveur web (apache dans mon cas)
 
-   ```Dockerfile 
-   # Utilisation de l'image Apache officielle
-   FROM httpd:latest
+```Dockerfile 
+# Utilisation de l'image Apache officielle
+FROM httpd:latest
 
-   # Copier le fichier index.html vers le répertoire /usr/local/apache2/htdocs/ du conteneur
-   COPY ./html/index.html /usr/local/apache2/htdocs/
+# Copier le fichier index.html vers le répertoire /usr/local/apache2/htdocs/ du conteneur
+COPY ./html/index.html /usr/local/apache2/htdocs/
 
-   # Définit le dossier de travail actuel
-   WORKDIR /usr/local/apache2/htdocs/
+# Définit le dossier de travail actuel
+WORKDIR /usr/local/apache2/htdocs/
 
-   # Ouvre le lien entre docker et la machine en ouvrant le port 80
-   EXPOSE 80
-   ```
+# Ouvre le lien entre docker et la machine en ouvrant le port 80
+EXPOSE 80
+```
 - Construire l'image avec :
-   ```bash 
-   docker build -t [NOM_DIMAGE] .
-   ```
+```bash 
+docker build -t [NOM_DIMAGE] .
+```
 - Exécuter cette image
-   ```bash 
-   docker run --name [NOM_DOCKER] -d -p 8080:80 [NOM_DIMAGE]
-   ```
+```bash 
+docker run --name [NOM_DOCKER] -d -p 8080:80 [NOM_DIMAGE]
+```
 - Vérifier ensuite sur le [localhost](http://localhost:8080/) sur le port 8080.
