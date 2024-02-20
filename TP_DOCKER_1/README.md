@@ -51,4 +51,4 @@
    ```bash 
    docker run --name [NOM_DOCKER] -d -p 8080:80 [NOM_DIMAGE_CREER]
    ```
-- Vérifier ensuite sur le [localhost].'(http://localhost:8080/)'
+- Vérifier ensuite sur le [localhost].(http://localhost:8080/)
