@@ -49,6 +49,6 @@
    ```
 - Exécuter cette image
    ```bash 
-   docker run --name [NOM_DOCKER] -d -p 8080:80 [NOM_DIMAGE_CREER]
+   docker run --name [NOM_DOCKER] -d -p 8080:80 [NOM_DIMAGE]
    ```
 - Vérifier ensuite sur le [localhost](http://localhost:8080/) sur le port 8080.
