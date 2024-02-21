@@ -1,20 +1,8 @@
-# Utiliser l'image Alpine Linux comme base
-FROM node:alpine
-
-# Définir le répertoire de travail de l'application dans le conteneur
+FROM node:20-alpine
 WORKDIR /app
 
-# Copier le package.json et package-lock.json dans le conteneur
-COPY ./src/package*.json .
-
-# Installer les dépendances de l'application
+COPY ./src ./
 RUN npm install
 
-# Copier le reste des fichiers de l'application dans le conteneur
-COPY . .
-
-# port EXPOSE
+CMD ["node","server.js"]
 EXPOSE 3000
-
-# Commande par défaut pour démarrer l'application Node.js
-CMD ["node", "app.js"]
