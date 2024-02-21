@@ -69,7 +69,7 @@ docker run --name [MY_CONTAINER] -d -p 8080:80 [MY_IMAGE]
 | Avantages  | Inconvénients   | 
 |-------------------------|-----------------------------|
 | Reproductibilité | Temps de construction de l'image |
-| Facilite la configuration | Taille de l'image |
+| Facilite la configuration | Taille de l'image peut être volumineuse |
 | Favorise le travail en équipe |  ||
 
 ### 5 . Utiliser une base de données dans un container docker
