@@ -45,11 +45,11 @@ EXPOSE 80
 ```
 - Construire l'image avec :
 ```bash 
-docker build -t [NOM_DIMAGE] .
+docker build -t [MY_IMAGE] .
 ```
 - Exécuter cette image
 ```bash 
-docker run --name [NOM_DOCKER] -d -p 8080:80 [NOM_DIMAGE]
+docker run --name [MY_CONTAINER] -d -p 8080:80 [MY_IMAGE]
 ```
 - Vérifier ensuite sur le [localhost](http://localhost:8080/) sur le port 8080.
 
@@ -70,3 +70,12 @@ docker run --name [NOM_DOCKER] -d -p 8080:80 [NOM_DIMAGE]
 | Reproductibilité | Temps de construction de l'image |
 | Facilite la configuration | Taille de l'image |
 | Favorise le travail en équipe |  ||
+
+### 5 . Utiliser une base de données dans un container docker
+
+   - Récupérer les images de mysql et de phpmyadmin:
+```bash 
+docker pull mysql:latest
+docker pull phpmyadmin/phpmyadmin:latest
+```
+   - Executer 2 containers à partir des images
