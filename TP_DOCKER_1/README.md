@@ -87,4 +87,5 @@ docker run -d --name phpmyadmin_container --link mysql_container:db -p 8080:80 p
 ```
 
   - Accéder à la plateforme phpmyadmin sur votre [localhost](http://localhost:8080/):
-   ![Phpmyadmin](./image.png)
+
+![Phpmyadmin](./image.png)
