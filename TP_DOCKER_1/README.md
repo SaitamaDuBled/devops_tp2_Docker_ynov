@@ -100,3 +100,37 @@ docker run -d --name phpmyadmin_container --link mysql_container:db -p 8080:80 p
 | Facilite la configuration | Principalement utilisé pour des cas simples ou des tests rapides.|
 | Permet de définir plusieurs services, leurs dépendances et leurs configurations dans un fichier unique| fastidieux pour la gestion d'applications complexes ou multi-conteneurs. ||
 
+   - Commande permettant de lancer tous les containers :
+```bash 
+   docker-compose up 
+```
+   - Commande permettant de les stopper :
+```bash 
+   docker-compose down
+```
+   - docker-compose.yml permettant d'utiliser phpmyadmin :
+
+```docker-compose.yml 
+
+# version de docker-compose
+version: '3.8'
+
+
+services:
+  # container pour mysql
+  mysql_container:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+
+  # container pour phpmyadmin
+  phpmyadmin_container:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    environment:
+      PMA_HOST: mysql_server
+    # port EXPOSE
+    ports:
+      - "8080:80"
+```

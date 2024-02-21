@@ -1,0 +1,21 @@
+# version de docker-compose
+version: '3.8'
+
+
+services:
+  # container pour mysql
+  mysql_container:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+
+  # container pour phpmyadmin
+  phpmyadmin_container:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    environment:
+      PMA_HOST: mysql_server
+    # port EXPOSE
+    ports:
+      - "8080:80"
