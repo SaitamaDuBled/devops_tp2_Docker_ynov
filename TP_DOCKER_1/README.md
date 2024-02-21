@@ -52,3 +52,21 @@ docker build -t [NOM_DIMAGE] .
 docker run --name [NOM_DOCKER] -d -p 8080:80 [NOM_DIMAGE]
 ```
 - Vérifier ensuite sur le [localhost](http://localhost:8080/) sur le port 8080.
+
+### Avantages et inconvénients des 2 méthodes
+
+- **Docker Run Only** :
+
+| Avantages  | Inconvénients   | 
+|-------------------------|-----------------------------|
+| Rapidité de mise en place | Reproductibilité compliquée |
+| Pratique pour des tâches simples | Commandes longues et complexes |
+| | Limité en termes de travail d'équipe |
+
+- **Dockerfile** :
+
+| Avantages  | Inconvénients   | 
+|-------------------------|-----------------------------|
+| Reproductibilité | Temps de construction de l'image |
+| Facilite la configuration | Taille de l'image |
+| Favorise le travail en équipe |  ||
