@@ -94,7 +94,7 @@ docker run -d --name phpmyadmin_container --link mysql_container:db -p 8080:80 p
 
    - docker-compose comparé à docker run:
    
-| Docker Compose  | Docker Run   | 
+| **Docker Compose**  | **Docker Run**   | 
 |-------------------------|-----------------------------|
 | Utilisé pour définir et gérer des applications multi-conteneurs | Utilisé pour lancer des conteneurs Docker individuels. |
 | Facilite la configuration | Principalement utilisé pour des cas simples ou des tests rapides.|
