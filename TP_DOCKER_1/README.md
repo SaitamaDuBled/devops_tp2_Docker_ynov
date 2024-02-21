@@ -90,7 +90,7 @@ docker run -d --name phpmyadmin_container --link mysql_container:db -p 8080:80 p
 
 ![Phpmyadmin](./image.png)
 
-### 6 Utilisation de docker-compose.yml
+### 6 . Utilisation de docker-compose.yml
 
    - docker-compose comparé à docker run:
    
