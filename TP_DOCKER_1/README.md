@@ -86,6 +86,17 @@ docker run -d --name mysql_container -e MYSQL_ROOT_PASSWORD=password mysql:lates
 docker run -d --name phpmyadmin_container --link mysql_container:db -p 8080:80 phpmyadmin/phpmyadmin:latest
 ```
 
-  - Accéder à la plateforme phpmyadmin sur votre [localhost](http://localhost:8080/):
+  - Accéder à la plateforme phpmyadmin sur votre [localhost:8080](http://localhost:8080/):
 
 ![Phpmyadmin](./image.png)
+
+### 6 Utilisation de docker-compose.yml
+
+   - docker-compose comparé à docker run:
+   
+| Docker Compose  | Docker Run   | 
+|-------------------------|-----------------------------|
+| Utilisé pour définir et gérer des applications multi-conteneurs | Utilisé pour lancer des conteneurs Docker individuels. |
+| Facilite la configuration | Principalement utilisé pour des cas simples ou des tests rapides.|
+| Permet de définir plusieurs services, leurs dépendances et leurs configurations dans un fichier unique| fastidieux pour la gestion d'applications complexes ou multi-conteneurs. ||
+
