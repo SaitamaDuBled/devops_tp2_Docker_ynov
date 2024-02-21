@@ -43,6 +43,7 @@ WORKDIR /usr/local/apache2/htdocs/
 # Ouvre le lien entre docker et la machine en ouvrant le port 80
 EXPOSE 80
 ```
+
 - Construire l'image avec :
 ```bash 
 docker build -t [MY_IMAGE] .
@@ -79,3 +80,8 @@ docker pull mysql:latest
 docker pull phpmyadmin/phpmyadmin:latest
 ```
    - Executer 2 containers à partir des images
+
+```bash 
+docker run -d --name mysql_container -e MYSQL_ROOT_PASSWORD=password mysql:latest
+docker run -d --name phpmyadmin_container --link mysql_container:db -p 8080:80 phpmyadmin/phpmyadmin:latest
+```
